@@ -68,9 +68,12 @@ public class MainActivity extends Activity {
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
                 String scheme = uri.getScheme();
-                if ("http".equalsIgnoreCase(scheme) || "https".equalsIgnoreCase(scheme)) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
+                if ("http".equalsIgnoreCase(scheme) || "https".equalsIgnoreCase(scheme) || "mailto".equalsIgnoreCase(scheme)) {
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                    } catch (Exception ignored) {
+                    }
                     return true;
                 }
                 return false;
@@ -174,6 +177,16 @@ public class MainActivity extends Activity {
                     cm.setPrimaryClip(ClipData.newPlainText("QuickMemo", text));
                     Toast.makeText(context, "已复制到手机剪贴板", Toast.LENGTH_SHORT).show();
                 }
+            } catch (Exception ignored) {
+            }
+        }
+
+        @JavascriptInterface
+        public void openExternalUrl(String url) {
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
             } catch (Exception ignored) {
             }
         }

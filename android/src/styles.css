@@ -943,6 +943,73 @@ html, body {
   background: #fffafa;
 }
 
+.m-promo-card {
+  background: linear-gradient(135deg, #fffbeb 0%, #fff7ed 50%, #eef2ff 100%);
+  border: 1px solid #fde68a;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.08);
+}
+
+.m-promo-badge {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.m-promo-title {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #78350f;
+  line-height: 1.35;
+}
+
+.m-promo-desc {
+  font-size: 12.5px;
+  color: #451a03;
+  line-height: 1.55;
+}
+
+.m-promo-link {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.m-promo-contact-box {
+  margin-top: 4px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.m-promo-contact-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.m-promo-contact-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9a3412;
+}
+
+.m-promo-email {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  background: #eef2ff;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
 .m-non-commercial-badge {
   background: #fef2f2;
   color: #dc2626;

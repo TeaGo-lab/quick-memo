@@ -919,7 +919,61 @@ function renderSettingsTab() {
         </button>
       </section>
 
-      <!-- 4. 非商用开源协议约定 -->
+      <!-- 4. 开发者出品 · 命书官方站点与建议反馈 -->
+      <section class="m-settings-card m-promo-card">
+        <div class="m-promo-badge">✨ 开发者出品 · 精选官方站点</div>
+        <h3 class="m-promo-title">🏮 命书 · 东方传统子平八字 × 紫微斗数双盘合参</h3>
+        <p class="m-promo-desc">
+          探索我们的主站 <strong><a href="https://mingshu.closty.art" target="_blank" rel="noopener" class="m-promo-link">https://mingshu.closty.art</a></strong> —— 融合子平八字与紫微斗数双盘互证，遵循古籍体例输出十四章文白融合详批命书、时辰定盘校准与即时易占体验。
+        </p>
+        <div class="m-btn-grid-2">
+          <button type="button" class="m-primary-btn" data-open-url="https://mingshu.closty.art">
+            🌐 立即访问 mingshu.closty.art
+          </button>
+          <button type="button" class="m-tool-btn" data-copy-text="https://mingshu.closty.art" style="justify-content:center;">
+            📋 复制官网网址
+          </button>
+        </div>
+
+        <div class="m-promo-contact-box">
+          <div class="m-promo-contact-head">
+            <span class="m-promo-contact-label">📬 建议与反馈信箱</span>
+            <code class="m-promo-email">teagoxu@proton.me</code>
+          </div>
+          <p class="m-settings-hint" style="margin: 2px 0 6px;">
+            如果你在使用 QuickMemo 时有任何改进建议、新功能想法、Bug 反馈或合作意向，欢迎随时发邮件告诉我们！
+          </p>
+          <div class="m-btn-grid-2">
+            <button type="button" class="m-tool-btn primary" data-copy-text="teagoxu@proton.me" style="justify-content:center;">
+              📋 复制邮箱地址
+            </button>
+            <button type="button" class="m-tool-btn" data-open-url="mailto:teagoxu@proton.me?subject=QuickMemo%20%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE%E4%B8%8E%E5%8F%8D%E9%A6%88" style="justify-content:center;">
+              ✉️ 写邮件提建议
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. 赞赏支持 -->
+      <section class="m-settings-card">
+        <div class="m-card-head-row">
+          <h3>☕ 赞赏与支持（请作者喝杯茶）</h3>
+          <span class="m-sync-badge ok">🙏 感谢鼓励</span>
+        </div>
+        <p class="m-settings-hint">QuickMemo 免费开源、无商业弹窗广告、数据本地化。如果它对你有帮助，欢迎点击二维码放大赞赏支持：</p>
+        <div class="m-qr-grid">
+          <div class="m-qr-box wechat" data-zoom-qr="${escapeHtml(wechatQrUrl)}" data-zoom-title="💚 微信赞赏 · 喝茶去(*旭)">
+            <img src="${escapeHtml(wechatQrUrl)}" alt="微信赞赏码" />
+            <span>💚 微信支付赞赏</span>
+          </div>
+          <div class="m-qr-box alipay" data-zoom-qr="${escapeHtml(alipayQrUrl)}" data-zoom-title="💙 支付宝赞赏 · TeaGo(*旭)">
+            <img src="${escapeHtml(alipayQrUrl)}" alt="支付宝赞赏码" />
+            <span>💙 支付宝 · TeaGo(*旭)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 非商用开源协议约定 -->
       <section class="m-settings-card m-license-card">
         <div class="m-card-head-row">
           <h3>📜 非商用使用约定（禁止商用）</h3>
@@ -933,22 +987,6 @@ function renderSettingsTab() {
           <li><strong>🚫 严禁商用</strong>：严禁在淘宝、闲鱼、拼多多、小红书等任何渠道售卖安装包/源码或提供有偿代装服务；严禁内嵌至商业产品/SaaS；严禁未经书面授权的企业商用及抹除版权标识。</li>
           <li><strong>📬 商业授权与反馈邮箱</strong>：<code>teagoxu@proton.me</code></li>
         </ul>
-      </section>
-
-      <!-- 5. 赞赏支持 -->
-      <section class="m-settings-card">
-        <h3>☕ 赞赏与支持作者</h3>
-        <p class="m-settings-hint">QuickMemo 免费开源、无广告、数据本地化。如果它对你有帮助，欢迎点击二维码放大赞赏支持：</p>
-        <div class="m-qr-grid">
-          <div class="m-qr-box wechat" data-zoom-qr="${escapeHtml(wechatQrUrl)}" data-zoom-title="💚 微信赞赏 · 喝茶去(*旭)">
-            <img src="${escapeHtml(wechatQrUrl)}" alt="微信赞赏码" />
-            <span>💚 微信支付赞赏</span>
-          </div>
-          <div class="m-qr-box alipay" data-zoom-qr="${escapeHtml(alipayQrUrl)}?v=teago" data-zoom-title="💙 支付宝赞赏 · TeaGo(*旭)">
-            <img src="${escapeHtml(alipayQrUrl)}?v=teago" alt="支付宝赞赏码" />
-            <span>💙 支付宝 · TeaGo(*旭)</span>
-          </div>
-        </div>
       </section>
     </main>
   `;
@@ -1763,6 +1801,7 @@ function bindEvents() {
       e.stopPropagation();
       const txt = btn.getAttribute('data-copy-text') || '';
       if (!txt) return;
+      const origLabel = btn.textContent;
       if (window.AndroidNative && typeof window.AndroidNative.copyToClipboard === 'function') {
         window.AndroidNative.copyToClipboard(txt);
       } else {
@@ -1770,8 +1809,21 @@ function bindEvents() {
       }
       btn.textContent = '✅ 已复制';
       setTimeout(() => {
-        btn.textContent = '📋 复制';
+        btn.textContent = origLabel;
       }, 1000);
+    });
+  });
+
+  document.querySelectorAll('[data-open-url]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const url = btn.getAttribute('data-open-url') || '';
+      if (!url) return;
+      if (window.AndroidNative && typeof window.AndroidNative.openExternalUrl === 'function') {
+        window.AndroidNative.openExternalUrl(url);
+      } else {
+        window.open(url, '_blank');
+      }
     });
   });
 
