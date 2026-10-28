@@ -1,25 +1,28 @@
-# Dependencies & Build outputs
+# Dependencies & Build Artifacts
 node_modules/
+**/node_modules/
 dist/
+**/dist/
 src-tauri/target/
-src-tauri/gen/
+**/src-tauri/target/
+android/android/
 
-# Local user config (may contain LLM API keys)
-.quick-memo-config.json
-.window-cmd.json
+# Runtime & Local Profiles
 .webview-profile/
+**/.webview-profile/
 .crawler-profile/
+**/.crawler-profile/
+.window-cmd.json
+**/.window-cmd.json
+.quick-memo-config.json
+**/.quick-memo-config.json
 
-# User local Markdown vault data
-vault/*
-vault/.quick-memo-*
-vault/.git
-!vault/.gitkeep
-backups/
+# Vault User Data (nested git repository)
+desktop/vault/
 
-# OS & Editor files
+# OS & Logs
 .DS_Store
 Thumbs.db
 *.log
-
-AGENTS.md
+*.idsig
+promo-film/

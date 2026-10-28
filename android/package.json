@@ -1,0 +1,24 @@
+{
+  "name": "quick-memo-android",
+  "private": true,
+  "version": "0.8.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "description": "QuickMemo 安卓移动端 · 手机随手记、API Key 保险箱与 AI 自动分类收纳盒（支持 Gitee/GitHub 与桌面版双向同步，严禁商用）",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 1421",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 1421",
+    "cap:init": "npx cap add android",
+    "cap:sync": "npm run build && npx cap sync android",
+    "cap:open": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
+    "vite": "^6.0.0"
+  }
+}

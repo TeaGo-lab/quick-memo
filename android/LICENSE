@@ -1,0 +1,38 @@
+QuickMemo 非商业开源许可协议 (QuickMemo Non-Commercial License)
+================================================================
+
+版权所有 (c) 2026 QuickMemo (TeaGo-lab / teagoxu@proton.me)
+保留所有权利 (All Rights Reserved, except as explicitly granted below).
+
+本软件及相关文档、源代码、构建脚本与发行包（统称“本软件”）基于以下非商业许可条款向公众开放。凡下载、安装、复制、修改或使用本软件，即表示您已阅读、理解并同意遵守本协议的全部约定：
+
+一、 授权允许的范围（Permitted Non-Commercial Uses）
+--------------------------------------------------
+在完整保留本版权声明及本许可协议的前提下，免费授予任何个人非排他性、不可转让的权利：
+1. 个人使用：可出于个人日常效率记录、个人知识库管理等非商业目的，免费安装与运行本软件；
+2. 学习与研究：可查阅、复刻（Fork）及修改本软件源代码，用于个人编程学习、学术研究或非商业性质的技术交流；
+3. 非商业分享：可在注明原作者署名（TeaGo-lab / QuickMemo）及原始仓库地址的前提下，向他人免费分享本软件，但不得附加任何收费条件、引流付费墙或商业捆绑。
+
+二、 严禁商业用途约定（Strictly Prohibited Commercial Uses）
+----------------------------------------------------------
+未经版权所有人事前书面授权，严禁将本软件（含源代码、可执行程序、UI 界面、衍生修改版）用于任何商业用途，包括但不限于：
+1. 严禁售卖与有偿分发：严禁在任何电商平台、二手平台、社群或网站（如淘宝、闲鱼、拼多多、小红书、知识星球、付费社群等）以任何形式售卖本软件、安装包、源码、激活码或提供“有偿代安装/代配置”服务；
+2. 严禁商业产品内嵌与打包：严禁将本软件全部或部分代码、功能模块集成、内嵌、封装或捆绑至任何商业软件、付费产品、商业硬件或商业 SaaS 服务中；
+3. 严禁企业商业运营使用：严禁任何企业、商业组织或营利性机构将本软件用于商业生产环境、商业客户服务或面向外部/内部的营利性业务场景；
+4. 严禁篡改版权标识：严禁移除、隐藏、替换或篡改本软件源码、文档及软件界面中的版权声明、作者署名与“禁止商用”标识。
+
+三、 商业授权联系（Commercial Licensing）
+----------------------------------------
+如您需要将本软件用于商业用途、企业内部部署或商业合作，必须事先联系作者获取独立的书面商业授权：
+- 联系邮箱：teagoxu@proton.me
+- 项目仓库：https://github.com/TeaGo-lab/quick-memo
+
+四、 免责声明（Disclaimer of Warranty）
+--------------------------------------
+本软件按“原样”（AS IS）提供，不附带任何明示或暗示的担保（包括但不限于适销性、特定用途适用性及不侵权担保）。在任何情况下，作者或版权持有人均不对因使用或无法使用本软件而导致的任何直接、间接、偶然、特殊或后续损害（包括但不限于数据丢失、业务中断）承担赔偿责任。
+
+----------------------------------------------------------------
+
+English Summary:
+This project (QuickMemo) is licensed strictly for PERSONAL, EDUCATIONAL, and NON-COMMERCIAL use only.
+Any commercial use, including but not limited to selling, paid distribution, bundling into commercial products/SaaS, or unauthorized enterprise commercial use, is strictly prohibited without prior written permission from the copyright holder (teagoxu@proton.me).

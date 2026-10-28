@@ -1,0 +1,22 @@
+[package]
+name = "quick-memo"
+version = "0.1.0"
+description = "替代微信文件传输助手的极速桌面闪念与文件收纳盒，支持 LLM 自动分类保存为本地 Markdown（仅供个人非商业使用，禁止商用）"
+authors = ["QuickMemo"]
+license-file = "../LICENSE"
+edition = "2021"
+
+[lib]
+name = "quick_memo_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-global-shortcut = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+base64 = "0.22"
+chrono = "0.4"

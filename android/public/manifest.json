@@ -1,0 +1,24 @@
+{
+  "name": "QuickMemo · 闪念与文件 AI 收纳盒",
+  "short_name": "QuickMemo",
+  "description": "替代微信文件传输助手的移动端闪念、API Key 与文件 AI 收纳盒（仅供个人非商业使用）",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

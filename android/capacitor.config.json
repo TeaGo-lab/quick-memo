@@ -1,0 +1,9 @@
+{
+  "appId": "com.quickmemo.android",
+  "appName": "QuickMemo",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
