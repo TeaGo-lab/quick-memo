@@ -1798,7 +1798,7 @@ function renderAboutView() {
             </p>
             <div class="about-promo-actions">
               <button class="primary-submit-btn" id="btn-open-mingshu-site" data-url="https://mingshu.closty.art">
-                🌐 立即访问 mingshu.closty.art
+                立即访问
               </button>
               <button class="tool-btn" data-copy-code="https://mingshu.closty.art">
                 📋 复制官网网址

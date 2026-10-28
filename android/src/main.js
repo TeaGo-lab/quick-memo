@@ -928,7 +928,7 @@ function renderSettingsTab() {
         </p>
         <div class="m-btn-grid-2">
           <button type="button" class="m-primary-btn" data-open-url="https://mingshu.closty.art">
-            🌐 立即访问 mingshu.closty.art
+            立即访问
           </button>
           <button type="button" class="m-tool-btn" data-copy-text="https://mingshu.closty.art" style="justify-content:center;">
             📋 复制官网网址

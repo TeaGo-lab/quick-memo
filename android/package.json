@@ -1,7 +1,7 @@
 {
   "name": "quick-memo-android",
   "private": true,
-  "version": "0.8.0",
+  "version": "0.8.1",
   "license": "SEE LICENSE IN LICENSE",
   "description": "QuickMemo 安卓移动端 · 手机随手记、API Key 保险箱与 AI 自动分类收纳盒（支持 Gitee/GitHub 与桌面版双向同步，严禁商用）",
   "type": "module",
