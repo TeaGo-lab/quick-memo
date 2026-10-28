@@ -67,25 +67,54 @@ $alignedApk = "$workDir\aligned.apk"
 & $zipalign -f -p 4 $unalignedApk $alignedApk
 
 Write-Output "=== [6/6] Signing APK (apksigner) ==="
-$keystore = "$androidDir\native\quickmemo-release.keystore"
+$ksConfigPath = "$androidDir\.keystore.local.json"
+$keystore = $env:QUICKMEMO_KEYSTORE_PATH
+$ksAlias = $env:QUICKMEMO_KEYSTORE_ALIAS
+$ksPass = $env:QUICKMEMO_KEYSTORE_PASS
+
+if ((-not $keystore -or -not $ksPass) -and (Test-Path $ksConfigPath)) {
+  $ksCfg = Get-Content -Path $ksConfigPath -Raw -Encoding UTF8 | ConvertFrom-Json
+  if (-not $keystore) { $keystore = $ksCfg.keystorePath }
+  if (-not $ksAlias) { $ksAlias = $ksCfg.keyAlias }
+  if (-not $ksPass) { $ksPass = $ksCfg.storePassword }
+}
+
+if (-not $keystore) {
+  $keystore = "$androidDir\native\quickmemo-private.keystore"
+}
+if (-not $ksAlias) {
+  $ksAlias = "quickmemo"
+}
+if (-not $ksPass) {
+  $bytes = New-Object byte[] 24
+  [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
+  $ksPass = [Convert]::ToBase64String($bytes) -replace '[^a-zA-Z0-9]', 'X'
+  @{
+    keystorePath  = $keystore
+    keyAlias      = $ksAlias
+    storePassword = $ksPass
+    createdAt     = (Get-Date).ToString("o")
+  } | ConvertTo-Json | Set-Content -Path $ksConfigPath -Encoding UTF8
+}
+
 if (-not (Test-Path $keystore)) {
   & keytool -genkeypair `
     -keystore $keystore `
-    -alias quickmemo `
+    -alias $ksAlias `
     -keyalg RSA `
     -keysize 2048 `
     -validity 10000 `
-    -storepass 123456 `
-    -keypass 123456 `
+    -storepass $ksPass `
+    -keypass $ksPass `
     -dname "CN=QuickMemo, OU=TeaGoLab, O=QuickMemo, L=CN, S=CN, C=CN"
 }
 
 $finalApk = "$androidDir\QuickMemo.apk"
 & $apksigner sign `
   --ks $keystore `
-  --ks-key-alias quickmemo `
-  --ks-pass pass:123456 `
-  --key-pass pass:123456 `
+  --ks-key-alias $ksAlias `
+  --ks-pass "pass:$ksPass" `
+  --key-pass "pass:$ksPass" `
   --out $finalApk `
   $alignedApk
 

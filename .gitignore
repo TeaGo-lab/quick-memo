@@ -26,3 +26,9 @@ Thumbs.db
 *.log
 *.idsig
 promo-film/
+
+# Android Signing Keys & Credentials (NEVER commit to Git)
+*.keystore
+*.jks
+**/.keystore.local.json
+**/keystore.properties
